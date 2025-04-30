@@ -904,8 +904,6 @@ void Tutorial21_RayTracing::UpdateUI()
 
         if (ImGui::SliderInt("Count of Cubes", &m_numberCubes, 0, NumCubes))
         {
-            // The user changed Count  rebuild the positions+names:
-
             for (int i = 0; i < NumCubes; ++i)
             {
                 if (i < m_numberCubes)
