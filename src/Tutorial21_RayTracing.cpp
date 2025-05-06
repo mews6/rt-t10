@@ -1,4 +1,4 @@
-﻿/*
+/*
  *  Copyright 2019-2025 Diligent Graphics LLC
  *  Copyright 2015-2019 Egor Yusov
  *
@@ -586,24 +586,27 @@ void Tutorial21_RayTracing::UpdateTLAS()
     };
 
     Instances[0].InstanceName = "Cube Instance 1";
+    Instances[0].CustomId     = 0; // texture index
     Instances[0].pBLAS        = m_pCubeBLAS;
-    Instances[0].Mask         = TRANSPARENT_GEOM_MASK;
+    Instances[0].Mask         = OPAQUE_GEOM_MASK;
     AnimateOpaqueCube(Instances[0]);
 
     Instances[1].InstanceName = "Cube Instance 2";
+    Instances[1].CustomId     = 1; // texture index
     Instances[1].pBLAS        = m_pCubeBLAS;
     Instances[1].Mask         = TRANSPARENT_GEOM_MASK;
     AnimateOpaqueCube(Instances[1]);
 
     Instances[2].InstanceName = "Cube Instance 3";
+    Instances[2].CustomId     = 2; // texture index
     Instances[2].pBLAS        = m_pCubeBLAS;
-    Instances[2].Mask         = TRANSPARENT_GEOM_MASK;
-    Instances[2].Transform.SetTranslation(2.0f, -3.0f, 0.0f);
+    Instances[2].Mask         = OPAQUE_GEOM_MASK;
     AnimateOpaqueCube(Instances[2]);
 
     Instances[3].InstanceName = "Cube Instance 4";
+    Instances[3].CustomId     = 3; // texture index
     Instances[3].pBLAS        = m_pCubeBLAS;
-    Instances[3].Mask         = TRANSPARENT_GEOM_MASK;
+    Instances[3].Mask         = OPAQUE_GEOM_MASK;
     AnimateOpaqueCube(Instances[3]);
 
     Instances[4].InstanceName = "Ground Instance";
